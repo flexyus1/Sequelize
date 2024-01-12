@@ -21,5 +21,5 @@ app.get('/', (req, res) => {
   res.render('home')
 })
 
-
+//aplicação rodara no localhost:3000
 app.listen(3000)
