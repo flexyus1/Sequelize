@@ -19,6 +19,29 @@ app.set('view engine', 'handlebars')
 
 app.use(express.static('public'))
 
+app.get('/users/create', (req, res) => {
+  res.render('adduser')
+})
+
+app.post('/users/create', (req,res) => {
+
+  const name = req.body.name
+  const  occupation = req.body.occupation
+  let newsletter = req.body.newsletter
+
+  if( newsletter == 'on') {
+    newsletter = true
+  }else {
+    newsletter = false
+  }
+
+   User.create({name, occupation, newsletter})
+
+  console.log(req.body)
+
+  res.redirect('/')
+})
+
 app.get('/', (req, res) => {
   res.render('home')
 })

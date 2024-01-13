@@ -39,7 +39,26 @@ h1{
   margin-bottom: 0.3rem;
 }
 
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+
+.form-checkbox {
+  flex-direction: row;
+}
+
+.form-checkbox input {
+  margin-right: 10px;
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
 .form-control input {
   padding: 5px;
 }
-
