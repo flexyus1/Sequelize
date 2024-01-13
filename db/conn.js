@@ -8,13 +8,13 @@ dialect: 'mysql'
 
 })
 
-try {
+// try {
 
-  sequelize.authenticate()
-  console.log('Conectado com sucesso com o sequelize')
+//   sequelize.authenticate()
+//   console.log('Conectado com sucesso com o sequelize')
 
-} catch(err){
-  console.log('Não foi possivel conectar: ', error)
-}
+// } catch(err){
+//   console.log('Não foi possivel conectar: ', error)
+// }
 
 module.exports = sequelize
