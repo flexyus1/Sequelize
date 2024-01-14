@@ -10,6 +10,10 @@ const Address = db.define('Address', {
     type:DataTypes.STRING,
     required:true,
   },
+  number: {
+    type:DataTypes.STRING,
+    required: true
+  },
   city: {
       type:DataTypes.STRING,
       required: true
@@ -17,6 +21,8 @@ const Address = db.define('Address', {
 
 })
 
+//um usuario pode ter varios endereços, mas so endereço tem apenas um usuário
+User.hasMany(Address)
 Address.belongsTo(User)//Address pertence a User
 
 module.exports = Address
